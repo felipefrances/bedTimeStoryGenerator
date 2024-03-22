@@ -1,0 +1,23 @@
+# https://realm.github.io/SwiftLint/rule-directory.html
+
+disabled_rules:
+    - trailing_whitespace
+    - type_name
+    - comment_spacing
+    - line_length
+    - switch_case_alignment
+
+identifier_name:
+    min_length: 1
+
+opt_in_rules:
+    - indentation_width
+    - literal_expression_end_indentation
+    - closure_end_indentation
+    - closure_spacing
+    - trailing_closure
+    - multiline_arguments
+    - multiline_arguments_brackets
+    - multiline_parameters
+    - multiline_function_chains
+    - vertical_parameter_alignment_on_call
