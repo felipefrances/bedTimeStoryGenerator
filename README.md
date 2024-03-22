@@ -20,17 +20,23 @@ To use this tool, you need to have Swift installed on your system. Once Swift is
 
 This tool provides several subcommands:
 
-- `add`: Add keywords to the word bank.
-- `story`: Generate an entire bedtime story.
+- `add`: Add keywords to the word bank. Especify the type of word and then the one you want to add.
+  
+      ./bedtime add -c unicorn
+- `story`: Generate an entire bedtime story. You can choose among 3 lengths of story and 3 age ranges for the child.
+  
+      ./bedtime story -l short a- preschooler
 - `prompt`: Request a prompt from previously loaded keywords.
+
+      ./bedtime prompt
 - `list`: List all the keywords currently in the word bank.
-- `remove`: Remove keywords from the word bank.
 
-To use any of these subcommands, run the generated executable followed by the desired subcommand. For example:
+      ./bedtime list
+- `remove`: Remove keywords from the word bank. Especify the type of word and then the one you want to delete.
 
-Eg.: `./bedtime add -c "unicorn"`
+        ./bedtime remove -c unicorn
 
-This command will add the word "unicorn" to the word bank.
+To use any of these subcommands, run the generated executable followed by the desired subcommand.
 
 **Note:** Ensure that you have included your Google API key in the `GenerativeAI-Info.plist` file for the tool to function properly.
 
@@ -47,6 +53,10 @@ We welcome contributions from the community! If you'd like to contribute to the 
 ## Like this Tool?
 
 If you find this tool useful, please consider starring the repository on GitHub to show your support!
+
+## Team
+
+This tool was made by [Raissa Parente](https://github.com/raissaparente) and Felipe Frances as part of a CLI challenge at Apple Developer Academy - IFCE.
 
 ## Credits
 
