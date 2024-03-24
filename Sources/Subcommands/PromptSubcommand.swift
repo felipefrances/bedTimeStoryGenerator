@@ -41,12 +41,11 @@ struct Prompt: ParsableCommand {
             let prompt = "A \(chosenDescriptor ?? "happy") \(chosenCharacter ?? "child") \(chosenAction ?? "playing") in a \(chosenScenario ?? "field")"
             
             //ascii image
-            dotImage()
-            
+            printColor(color: Colors.green, text: book)
+
             //explains the process if verbose
             writeExplanation()
-            
-            print("Once upon a time there was:")
+            printColor(color: Colors.green, text: "Once upon a time there was:")
             print(prompt)
         }
     }

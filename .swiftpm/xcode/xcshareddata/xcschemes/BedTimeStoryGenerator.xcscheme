@@ -79,10 +79,6 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-h"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
             argument = "story -h"
             isEnabled = "NO">
          </CommandLineArgument>
@@ -92,7 +88,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "list"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "add  -c Felipe -s Fortaleza -a crying -d tired"
@@ -108,10 +104,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "story"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "prompt -h"
+            argument = "prompt"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
@@ -120,7 +116,11 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-v"
-            isEnabled = "YES">
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-h"
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>

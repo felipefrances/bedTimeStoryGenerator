@@ -74,7 +74,7 @@ struct Story: AsyncParsableCommand {
         let chosenScenario = loadedBank.scenarioBank.randomElement()
         
         //ascii image
-        dotImage()
+        printColor(color: Colors.red, text: book)
         
         //explains the process if verbose
         writeExplanation()
