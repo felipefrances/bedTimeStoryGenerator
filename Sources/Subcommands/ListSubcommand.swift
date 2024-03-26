@@ -25,10 +25,10 @@ struct List: ParsableCommand {
     func run() throws {
         //loads json wordbank and lists every word by category
         if let loadedBank = WordBank.loadBank() {
-            list("Descriptor", array: loadedBank.descriptorBank, color: Colors.cyan)
-            list("Character", array: loadedBank.characterBank, color: Colors.magenta)
-            list("Action", array: loadedBank.actionBank, color: Colors.yellow)
-            list("Scenario", array: loadedBank.scenarioBank, color: Colors.green)
+            list("--Descriptor--", array: loadedBank.descriptorBank, color: Colors.cyan)
+            list("--Character--", array: loadedBank.characterBank, color: Colors.magenta)
+            list("--Action--", array: loadedBank.actionBank, color: Colors.yellow)
+            list("--Scenario--", array: loadedBank.scenarioBank, color: Colors.green)
         }
     }
 }

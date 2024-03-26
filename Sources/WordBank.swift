@@ -17,7 +17,7 @@ struct WordBank: Codable {
     var actionBank: [String] = [
         "fighting", "running", "dancing", "reading", "skipping", "giggling", "exploring", "climbing", "helping", "singing", "whispering", "building", "dreaming", "painting"]
     var scenarioBank: [String] = [
-        "farm", "castle", "meadow", "island", "forest", "cottage", "beach", "kingdom", "marketplace", "sea", "hills", "cave", "treehouse", "sky", "volcano", "ship"]
+        "farm", "castle", "meadow", "forest", "cottage", "beach", "kingdom", "marketplace", "lake", "hill", "cave", "treehouse", "volcano", "ship"]
     
     //writing the word bank in a json file
     func saveBank() {

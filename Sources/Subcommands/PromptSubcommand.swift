@@ -35,8 +35,12 @@ struct Prompt: ParsableCommand {
             //explains the process if verbose
             writeExplanation(condition: verbose)
             
+            //TODO: Color
+            sleep(1)
             printColor(color: Colors.green, text: "Once upon a time there was:")
-            print(prompt)
+            sleep(1)
+            printColor(color: Colors.yellow, text: prompt)
+            print()
         }
     }
 }

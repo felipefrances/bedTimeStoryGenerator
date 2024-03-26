@@ -10,18 +10,18 @@ import ArgumentParser
 
 struct Remove: ParsableCommand {
     static var configuration
-    = CommandConfiguration(abstract: "Removes a custom keyword to the word bank.")
+    = CommandConfiguration(abstract: "Removes a custom keyword from the word bank.")
     
-    @Option(name: .shortAndLong, help: "Removes a character to the character list")
+    @Option(name: .shortAndLong, help: "Removes a character from the character list")
     var character: String?
     
-    @Option(name: .shortAndLong, help: "Removes a scenario to the scenario list")
+    @Option(name: .shortAndLong, help: "Removes a scenario from the scenario list")
     var scenario: String?
 
-    @Option(name: .shortAndLong, help: "Removes a action to the action list")
+    @Option(name: .shortAndLong, help: "Removes a action from the action list")
     var action: String?
 
-    @Option(name: .shortAndLong, help: "Removes a descriptor to the descriptor list")
+    @Option(name: .shortAndLong, help: "Removes a descriptor from the descriptor list")
     var descriptor: String?
         
     //takes the word given and removes it from an array chosen
@@ -38,20 +38,20 @@ struct Remove: ParsableCommand {
             
             //removes character by name if user chooses any
             if let character = character {
-                deleteWord(character, from: &loadedBank.characterBank)
+                deleteWord(character.lowercased(), from: &loadedBank.characterBank)
             }
             
             //removes scenario by name if user chooses any
             if let scenario = scenario {
-                deleteWord(scenario, from: &loadedBank.scenarioBank)
+                deleteWord(scenario.lowercased(), from: &loadedBank.scenarioBank)
             }
             //removes action by name if user chooses any
             if let action = action {
-                deleteWord(action, from: &loadedBank.actionBank)
+                deleteWord(action.lowercased(), from: &loadedBank.actionBank)
             }
             //removes description by name if user chooses any
             if let descriptor = descriptor {
-                deleteWord(descriptor, from: &loadedBank.descriptorBank)
+                deleteWord(descriptor.lowercased(), from: &loadedBank.descriptorBank)
             }
             
             loadedBank.saveBank()
