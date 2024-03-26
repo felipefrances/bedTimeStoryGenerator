@@ -40,9 +40,15 @@ struct Bedtime: AsyncParsableCommand {
     )
 }
 
-func verboseText(_ phrase: String, condition: Bool) {
+//function to help with verbose
+func writeExplanation(condition: Bool) {
     if condition {
-        print(phrase)
-        sleep(1)
+        let explanationText = ["Choosing an incredible description...", "Generating a wonderful character...", "Picking an exciting action...", "Thinking about an amazing scenario...", "Ok, here it comes..."]
+        let colors = [Colors.blue, Colors.cyan, Colors.red, Colors.magenta, Colors.yellow]
+        
+        for phrase in explanationText {
+            printColor(color: colors.randomElement() ?? colors[0], text: phrase)
+            sleep(1)
+        }
     }
 }

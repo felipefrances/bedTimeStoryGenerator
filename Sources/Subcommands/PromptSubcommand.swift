@@ -16,17 +16,6 @@ struct Prompt: ParsableCommand {
     @Flag(name: .shortAndLong, help: "Show the generating process")
     var verbose = false
     
-    //function to help with verbose
-    func writeExplanation() {
-        if verbose {
-            let explanationText = ["Choosing an incredible description...", "Generating a wonderful character...", "Picking an exciting action...", "Thinking about an amazing scenario...", "Ok, here it comes..."]
-            
-            for phrase in explanationText {
-                verboseText(phrase, condition: verbose)
-            }
-        }
-    }
-    
     func run() throws {
         
         //loads json wordbank
@@ -44,7 +33,8 @@ struct Prompt: ParsableCommand {
             printColor(color: Colors.green, text: book)
 
             //explains the process if verbose
-            writeExplanation()
+            writeExplanation(condition: verbose)
+            
             printColor(color: Colors.green, text: "Once upon a time there was:")
             print(prompt)
         }

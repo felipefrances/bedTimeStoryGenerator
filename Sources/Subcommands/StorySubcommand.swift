@@ -50,18 +50,7 @@ struct Story: AsyncParsableCommand {
     
     @Option(name: .shortAndLong, help: "Choose if your child is a toddler (0-3), a preschooler (4-6) or a kid (7-10+)")
     var age: Age?
-    
-    //function to help with verbose
-    func writeExplanation() {
-        if verbose {
-            let explanationText = ["Choosing an incredible description...", "Generating a wonderful character...", "Picking an exciting action...", "Thinking about an amazing scenario...", "Ok, here it comes..."]
-            
-            for phrase in explanationText {
-                verboseText(phrase, condition: verbose)
-            }
-        }
-    }
-    
+        
     func run() async throws {
         
         //loads json wordbank
@@ -77,7 +66,7 @@ struct Story: AsyncParsableCommand {
         printColor(color: Colors.red, text: book)
         
         //explains the process if verbose
-        writeExplanation()
+        writeExplanation(condition: verbose)
         
         let prompt = "A \(chosenDescriptor ?? "happy") \(chosenCharacter ?? "child") \(chosenAction ?? "playing") in a \(chosenScenario ?? "field")"
         
